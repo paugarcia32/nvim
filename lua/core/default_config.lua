@@ -34,7 +34,7 @@ M.ui = {
     theme = "default", -- default/vscode/vscode_colored/minimal
     -- default/round/block/arrow separators work only for default statusline theme
     -- round and block will work for minimal theme only
-    separator_style = "default",
+    separator_style = "round",
     overriden_modules = nil,
   },
 
@@ -48,7 +48,7 @@ M.ui = {
 
   -- nvdash (dashboard)
   nvdash = {
-    load_on_startup = false,
+    load_on_startup = true,
 
     header = {
       "           ▄ ▄                   ",
@@ -73,7 +73,6 @@ M.ui = {
   },
 
   cheatsheet = { theme = "grid" }, -- simple/grid
-
   lsp = {
     -- show function signatures i.e args as you type
     signature = {
