@@ -41,9 +41,9 @@ return {
         "gitignore",
         -- "query",
         -- "vimdoc",
-        "c",
-        "cpp",
-        "arduino",
+        --"c",
+        --"cpp",
+        --"arduino",
         "typst",
       },
       incremental_selection = {
