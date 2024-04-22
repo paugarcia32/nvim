@@ -1,10 +1,10 @@
 return {
   "neovim/nvim-lspconfig",
-  event = { "User FilePost"},
+  event = { "User FilePost" },
   dependencies = {
     "hrsh7th/cmp-nvim-lsp",
     { "antosha417/nvim-lsp-file-operations", config = true },
-    { "folke/neodev.nvim", opts = {} },
+    { "folke/neodev.nvim",                   opts = {} },
   },
   config = function()
     -- import lspconfig plugin
@@ -80,12 +80,7 @@ return {
 
 
 
-    local my_arduino_fqbn = {
-        ["COM4"] = "esp32:esp32:esp32doit-devkit-v1",
-        -- ["/home/h4ck3r/dev/arduino/sensor"] = "arduino:mbed:nanorp2040connect",
-    }
 
-    local DEFAULT_FQBN = "esp32:esp32:esp32doit-devkit-v1"
 
     mason_lspconfig.setup_handlers({
       -- default handler for installed servers
@@ -124,8 +119,14 @@ return {
           capabilities = capabilities,
           settings = {
             exportPdf = "onType" -- Choose onType, onSave or never.
-                -- serverPath = "" -- Normally, there is no need to uncomment it.
+            -- serverPath = "" -- Normally, there is no need to uncomment it.
           },
+        })
+      end,
+      ["clangd"] = function()
+        -- configure lua server (with special settings)
+        lspconfig["clangd"].setup({
+          capabilities = capabilities,
         })
       end,
 
@@ -283,10 +284,10 @@ return {
           },
           filetypes = { "arduino" },
           cmd = {
-              "arduino-language-server",
-              "-cli-config", "/Users/Pau/AppData/Local/Arduino15/arduino-cli.yaml",
-              "-fqbn",
-              "esp32:esp32:esp32doit-devkit-v1"
+            "arduino-language-server",
+            "-cli-config", "/Users/Pau/AppData/Local/Arduino15/arduino-cli.yaml",
+            "-fqbn",
+            "esp32:esp32:esp32doit-devkit-v1"
           },
           -- on_new_config = function ()
 
