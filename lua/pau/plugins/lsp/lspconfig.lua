@@ -118,6 +118,16 @@ return {
           },
         })
       end,
+      ["typst_lsp"] = function()
+        -- configure lua server (with special settings)
+        lspconfig["typst_lsp"].setup({
+          capabilities = capabilities,
+          settings = {
+            exportPdf = "onType" -- Choose onType, onSave or never.
+                -- serverPath = "" -- Normally, there is no need to uncomment it.
+          },
+        })
+      end,
 
       ["arduino_language_server"] = function()
         -- configure lua server (with special settings)
