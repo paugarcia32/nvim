@@ -3,13 +3,7 @@ return {
   lazy = true,
   event = { "VeryLazy", "BufReadPre" },
   build = ":TSUpdate",
-  cmd = {
-    "NvimTreeToggle",
-    "NvimTreeOpen",
-    "NvimTreeFindFile",
-    "NvimTreeFindFileToggle",
-    "NvimTreeRefresh",
-  },
+
   dependencies = {
     "windwp/nvim-ts-autotag",
   },
