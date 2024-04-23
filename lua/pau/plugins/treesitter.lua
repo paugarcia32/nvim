@@ -8,7 +8,10 @@ return {
   config = function()
     -- import nvim-treesitter plugin
     local treesitter = require("nvim-treesitter.configs")
+    local treesitterInstall = require("nvim-treesitter.install")
 
+
+    treesitterInstall.compilers = ({ "clang" })
     -- configure treesitter
     treesitter.setup({ -- enable syntax highlighting
       highlight = {
