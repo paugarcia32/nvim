@@ -1,7 +1,7 @@
 return {
   "nvim-telescope/telescope.nvim",
   branch = "0.1.x",
-  event = { "VeryLazy" },
+  -- event = { "VeryLazy" },
   -- lazy = "true",
   dependencies = {
     "nvim-lua/plenary.nvim",
