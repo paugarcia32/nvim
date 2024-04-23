@@ -4,6 +4,8 @@ return {
     "williamboman/mason-lspconfig.nvim",
     "WhoIsSethDaniel/mason-tool-installer.nvim",
   },
+  event = { "VeryLazy" },
+  -- lazy = true,
   config = function()
     -- import mason
     local mason = require("mason")
