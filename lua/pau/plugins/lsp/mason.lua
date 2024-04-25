@@ -1,13 +1,14 @@
 return {
-	"williamboman/mason.nvim",
+	"williamboman/mason-lspconfig.nvim",
+
 	dependencies = {
-		"williamboman/mason-lspconfig.nvim",
+		"williamboman/mason.nvim",
 		"WhoIsSethDaniel/mason-tool-installer.nvim",
 	},
-	build = ":MasonUpdate",
+	-- build = ":MasonUpdate",
 	-- cmd = { "Mason", "MasonLog" },
-	-- event = { "VeryLazy" },
-	lazy = false,
+	event = { "VeryLazy" },
+	-- lazy = false,
 	config = function()
 		local mason = require("mason")
 		local mason_lspconfig = require("mason-lspconfig")
