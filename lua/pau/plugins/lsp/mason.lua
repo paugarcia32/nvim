@@ -6,9 +6,9 @@ return {
 		"WhoIsSethDaniel/mason-tool-installer.nvim",
 	},
 	-- build = ":MasonUpdate",
-	-- cmd = { "Mason", "MasonLog" },
-	event = { "VeryLazy" },
-	-- lazy = false,
+	cmd = { "Mason", "MasonLog" },
+	-- event = { "VeryLazy" },
+	lazy = true,
 	config = function()
 		local mason = require("mason")
 		local mason_lspconfig = require("mason-lspconfig")
