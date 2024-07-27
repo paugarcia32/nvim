@@ -20,13 +20,14 @@ keymap.set("n", "<leader>+", "<C-a>", { desc = "Increment number" }) -- incremen
 keymap.set("n", "<leader>-", "<C-x>", { desc = "Decrement number" }) -- decrement
 
 -- window management
-keymap.set("n", "<A-a>", "<C-w>v", { desc = "Split window vertically" }) -- split window vertically
-keymap.set("n", "<A-S-a>", "<C-w>s", { desc = "Split window horizontally" }) -- split window horizontally
+keymap.set("n", "<A-.>", "<C-w>v", { desc = "Split window vertically" }) -- split window vertically
+keymap.set("n", "<A-,>", "<C-w>s", { desc = "Split window horizontally" }) -- split window horizontally
 -- keymap.set("n", "<leader>se", "<C-w>=", { desc = "Make splits equal size" }) -- make split windows equal width & height
 keymap.set("n", "<A-x>", "<cmd>close<CR>", { desc = "Close current split" }) -- close current split window
 
 keymap.set("n", "<A-t>", "<cmd>tabnew<CR>", { desc = "Open new tab" }) -- open new tab
-keymap.set("n", "<A-w>", "<cmd>tabclose<CR>", { desc = "Close current tab" }) -- close current tab
+keymap.set("n", "<A-w>", "<cmd>bd<CR>", { desc = "Close current tab" }) -- close current tab
 keymap.set("n", "<tab>", "<cmd>tabn<CR>", { desc = "Go to next tab" }) --  go to next tab
 keymap.set("n", "<S-tab>", "<cmd>tabp<CR>", { desc = "Go to previous tab" }) --  go to previous tab
 -- keymap.set("n", "<leader>tf", "<cmd>tabnew %<CR>", { desc = "Open current buffer in new tab" }) --  move current buffer to new tab
+

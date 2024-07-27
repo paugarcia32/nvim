@@ -21,7 +21,8 @@ return {
 			path = path:gsub("/home/Pau", " ")
 			path = path:gsub("/Users/Pau", " ")
 			path = path:gsub("/Usuarios/Pau", " ")
-			path = path:gsub("C:/Users/Pau", " ")
+			path = path:gsub("C:\\Users\\Pau", " ")
+			path = path:gsub("E:\\", " -> ")
 			-- path = path:gsub("C:\Users\Pau", " ")
 			path = path .. "/"
 			local path_len = path:len()
