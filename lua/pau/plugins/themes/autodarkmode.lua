@@ -8,6 +8,7 @@ return {
 			vim.api.nvim_set_option("background", "dark")
 			-- vim.cmd("colorscheme onenord")
 			vim.cmd("colorscheme tokyonight-night")
+			-- vim.cmd("colorscheme kanagawa-wave")
 		end,
 		set_light_mode = function()
 			vim.api.nvim_set_option("background", "light")

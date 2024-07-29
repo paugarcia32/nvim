@@ -30,4 +30,13 @@ keymap.set("n", "<A-w>", "<cmd>bd<CR>", { desc = "Close current tab" }) -- close
 keymap.set("n", "<tab>", "<cmd>tabn<CR>", { desc = "Go to next tab" }) --  go to next tab
 keymap.set("n", "<S-tab>", "<cmd>tabp<CR>", { desc = "Go to previous tab" }) --  go to previous tab
 -- keymap.set("n", "<leader>tf", "<cmd>tabnew %<CR>", { desc = "Open current buffer in new tab" }) --  move current buffer to new tab
+keymap.set("n", "<A-l>", "<cmd>wincmd l<CR>", { desc = "Move to right split" })
+keymap.set("n", "<A-h>", "<cmd>wincmd h<CR>", { desc = "Move to left split" })
+keymap.set("n", "<A-j>", "<cmd>wincmd l<CR>", { desc = "Move to up split" })
+keymap.set("n", "<A-k>", "<cmd>wincmd h<CR>", { desc = "Move to down split" })
 
+keymap.set("n", "<A-=>", "<cmd>vertical resize +5<CR>", { desc = "Move to left split" })
+keymap.set("n", "<A-->", "<cmd>vertical resize -5<CR>", { desc = "Move to left split" })
+
+keymap.set("n", "<A-S-=>", "<cmd>horizontal resize +5<CR>", { desc = "Move to left split" })
+keymap.set("n", "<A-S-->", "<cmd>horizontal resize -5<CR>", { desc = "Move to left split" })
